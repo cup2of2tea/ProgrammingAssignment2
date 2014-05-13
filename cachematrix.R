@@ -1,6 +1,8 @@
 ## CTRL+A CTRL+C CTRL+V
 
-## juste replace mean by inverse and function mean by solve
+## we initialize functions used to set and get matrix i
+## and functions used to set and get inverse
+## Initially, the inverse matrix is not calculated, so i has null value
 
 makeCacheMatrix <- function(x = matrix()) {
   i <- NULL
@@ -17,7 +19,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## juste replace mean by inverse and function mean by solve
+## if the inverse was already calculated and the matrix is not changed
+## we simply returns the precalculated inverse
+## Else we calculate it with function solve
 
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
